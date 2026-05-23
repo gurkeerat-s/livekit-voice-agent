@@ -1,17 +1,18 @@
 """
-MLS search helper — shared between the ava text chatbot and the LiveKit voice agent.
+MLS search helper — shared between the text chatbot and the voice agent.
 
-Talks to the Condoville MLS API and returns a clean dict per listing.
+Talks to the brokerage's MLS API and returns a clean dict per listing.
 """
 
 from __future__ import annotations
 
+import os
 import re
 
 import httpx
 
-MLS_API = "https://cvre.ca/api/mls"
-MLS_IMAGE_BASE = "https://cvre.ca"
+MLS_API = os.environ.get("MLS_API_URL", "https://example.com/api/mls")
+MLS_IMAGE_BASE = os.environ.get("MLS_IMAGE_BASE", "https://example.com")
 
 JUNK_TYPES = {"parking space", "locker", "commercial retail", "industrial"}
 

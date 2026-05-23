@@ -1,3 +1,6 @@
+# Project-specific config (keep local, .example version is templated)
+livekit.toml
+
 # Secrets — never commit anything that could contain real API keys
 .env
 .env.*

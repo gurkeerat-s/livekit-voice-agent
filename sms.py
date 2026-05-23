@@ -10,7 +10,7 @@ import httpx
 
 logger = logging.getLogger("ava.sms")
 
-LISTING_URL = "https://cvre.ca/mls-property/{listing_id}"
+LISTING_URL = os.environ.get("LISTING_URL_TEMPLATE", "https://example.com/mls-property/{listing_id}")
 
 
 def _to_e164(phone: str, default_country: str = "+1") -> str | None:
