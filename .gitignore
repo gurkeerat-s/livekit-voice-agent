@@ -1,0 +1,25 @@
+# Secrets — never commit anything that could contain real API keys
+.env
+.env.*
+!.env.example
+*.key
+*secret*
+*credentials*
+*api_key*
+auth.json
+secrets.json
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
